@@ -1,0 +1,40 @@
+<div id="card" class="card">
+  <img src="avatar.jpg" class="avatar">
+  <h1>Имя</h1>
+  <p>Future IT Star ✨</p>
+  
+  <a onclick="toggleTheme()">🌙 Сменить тему</a>
+  <a href="https://www.instagram.com/">Мой Instagram</a>
+  <a href="https://www.instagram.com/">Мой Telegram</a>
+</div>
+
+<style>
+  body { 
+    background: #f0f2f5; font-family: sans-serif; 
+    display: flex; justify-content: center; align-items: center; height: 100vh;
+    transition: 0.3s;
+  }
+  .card {
+    background: white; padding: 40px; border-radius: 20px;
+    text-align: center; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  a {
+    display: block; padding: 15px; margin: 10px 0;
+    border: none; border-radius: 12px; background: #007AFF; color: white;
+    font-size: 16px; cursor: pointer; transition: 0.2s;
+  }
+  a:hover { transform: scale(1.05); }
+  
+  body.dark { background: #121212; }
+  .card.dark { background: #1E1E1E; color: white; }
+</style>
+
+<script>
+  function toggleTheme() {
+    let body = document.body;
+    let card = document.getElementById("card");
+    
+    body.classList.toggle("dark");
+    card.classList.toggle("dark");
+  }
+</script>
